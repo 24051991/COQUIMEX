@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>COQUIMEX</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Encabezado con menú -->
+  <header>
+    <div class="header-container">
+      <img src="img/logo.png" alt="Logo de la empresa" class="logo">
+      <h1>Comercializadora de Químicos Industriales de México</h1>
+      <nav>
+        <ul>
+          <li><a href="#inicio">Inicio</a></li>
+          <li><a href="#servicios">Productos</a></li>
+          <li><a href="#contacto">Contacto</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Sección inicio -->
+  <section id="inicio">
+    <h2>Bienvenido</h2>
+    <p>Ofrecemos servicios enfocados al tratamiento de aguas con productos amigables con el medio ambiente, tales como: inhibidores de corrosión, de incrustación, microbicidas, dispersantes, antiespumantes, coagulantes, floculantes y rompedores de emulsión. Nuestro personal especializado garantiza la protección de superficies metálicas y sistemas de agua contra corrosión, incrustación, depósitos y desarrollo microbiológico.</p>
+  </section>
+
+  <!-- Sección empresa -->
+  <section id="empresa">
+    <h2>Sobre Nosotros</h2>
+    <p>COQUIMEX es una empresa mexicana especializada en tratamiento de aguas, con ingenieros que cuentan con más de 30 años de experiencia en agua potable, industrial, de proceso, residual y su reúso, incluso para agua recreativa.</p>
+  </section>
+
+  <!-- Sección productos -->
+  <section id="servicios">
+    <h2>Nuestros Productos</h2>
+    <div class="productos">
+      <div class="producto">
+        <h3>Inhibidor de Corrosión CQIMC-101</h3>
+        <p>Protege el sistema de calderas contra corrosión, formación de incrustantes y arrastre de sólidos.</p>
+      </div>
+      <div class="producto">
+        <h3>Inhibidor de incrustación CQIMC-102</h3>
+        <p>Polímero orgánico para tratamiento de aguas de calderas, funciona como dispersante y acondicionador de lodo.</p>
+      </div>
+      <div class="producto">
+        <h3>Removedor de oxígeno CQIMC-103</h3>
+        <p>Neutraliza el oxígeno disuelto en agua, evitando la corrosión en sistemas de caldera.</p>
+      </div>
+      <div class="producto">
+        <h3>Hipoclorito de sodio al 13%</h3>
+        <p>Ideal para purificación de agua, eliminando bacterias, virus y microorganismos.</p>
+      </div>
+      <div class="producto">
+        <h3>Sal en pellets para dureza total</h3>
+        <p>Diseñada para suavizar el agua con disolución uniforme y constante, optimizando tu suavizador.</p>
+      </div>
+      <div class="producto">
+        <h3>Servicio y Capacitación</h3>
+        <p>Visitas técnicas y cursos de capacitación para personal de calderas.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Formulario de contacto -->
+  <section class="contacto">
+    <h2>Envíanos tus datos</h2>
+    <form id="formularioContacto">
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+
+      <label for="email">Correo electrónico:</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="mensaje">Mensaje:</label>
+      <textarea id="mensaje" name="mensaje" required></textarea>
+
+      <button type="submit">Enviar</button>
+    </form>
+    <p id="respuesta"></p>
+  </section>
+
+  <!-- Información de contacto -->
+  <section id="contacto">
+    <h2>Contacto</h2>
+    <p>¿Tienes dudas o necesitas una cotización? Contáctanos:</p>
+    <ul>
+      <li>📞 Tel: 8991208634</li>
+      <li>📞 Tel: 5615371322</li>
+      <li>📧 Correo: coquimuex.rc@gmail.com</li>
+      <li>📍 Dirección: Texcoco, Estado de México</li>
+    </ul>
+    <a href="https://wa.me/7227753045" target="_blank">
+      <button>¡Cotiza por WhatsApp!</button>
+    </a>
+  </section>
+
+  <!-- Botones flotantes -->
+  <a href="https://wa.me/7227753045" class="whatsapp-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/5/5e/WhatsApp_icon.png" alt="WhatsApp">
+  </a>
+  <a href="https://www.facebook.com/profile.php?id=61552772557875&locale=es_LA" class="facebook-float" target="_blank">
+    <img src="https://upload.wikimedia.org/wikipedia/commons/c/cd/Facebook_logo_%28square%29.png" alt="Facebook">
+  </a>
+
+  <!-- Script de formulario -->
+  <script>
+    document.getElementById('formularioContacto').addEventListener('submit', function(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('nombre').value;
+      const email = document.getElementById('email').value;
+      const mensaje = document.getElementById('mensaje').value;
+      if (nombre && email && mensaje) {
+        document.getElementById('respuesta').textContent = `Gracias por tu mensaje, ${nombre}. Te responderemos pronto.`;
+        this.reset();
+      } else {
+        document.getElementById('respuesta').textContent = 'Por favor completa todos los campos.';
+      }
+    });
+  </script>
+
+</body>
+</html>
+
