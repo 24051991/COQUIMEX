@@ -252,4 +252,53 @@ button:hover {
     display: none;
   }
 }
+#servicios {
+  background: url("img/laboratorio.png") no-repeat center center;
+  background-size: cover;
+  padding: 50px 20px;
+  color: white;
+}
+
+#servicios h2 {
+  text-align: center;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.productos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  background: rgba(0,0,0,0.6); /* fondo semitransparente para que los productos resalten */
+  padding: 20px;
+  border-radius: 12px;
+}
+.productos h3 {
+  color: black;
+}
+.contacto {
+  background-image: url("img/fondo-contacto.png"); /* ruta de tu imagen */
+  background-size: cover;   /* ajusta la imagen para cubrir todo */
+  background-position: center; /* centra la imagen */
+  background-repeat: no-repeat;
+  padding: 60px 30px; /* espacio interno para que no quede apretado */
+  color: white; /* texto en blanco para mejor visibilidad */
+  text-align: center;
+}
+#contacto {
+  background: url("img/contacto.png") no-repeat center center;
+  background-size: cover;
+  padding: 60px 20px;
+  color: black; /* texto en blanco para que resalte */
+  text-align: left;
+}
+#contacto form {
+  background: rgba(255, 255, 255, 0.8); /* fondo blanco transparente */
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 500px;
+  margin-left: 0;
+  color: black;
+  text-align: left;   /* texto dentro alineado a la izquierda */
+}
 
